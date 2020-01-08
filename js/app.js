@@ -2,6 +2,8 @@
 
 //Using demo from class on Jan 7th as reference // 
 
+let Allhorns = [];
+
 function Horns(horns){
     this.image_url = horns.image_url;
     this.title = horns.title;
@@ -32,3 +34,21 @@ Horns.readJson = () => {
 };
 
 $(() => Horns.readJson());
+
+$
+
+// Below function based on Shopping Cart lab from 201
+
+function populateForm() {
+    var selectElement = document.getElementById('select-keyword');
+    var opt = document.createElement('option');
+    // opt.appendChild( document.createTextNode('Make Selection') );
+    // selectElement.appendChild(opt);
+  
+    for (var i in Horns.allHorns) {
+      opt = document.createElement('option');
+      opt.appendChild( document.createTextNode(Horns.allHorns[i].keyword) );
+      selectElement.appendChild(opt);
+      //opt.value = (Product.allProducts[i].name);
+    }
+  }
