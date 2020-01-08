@@ -24,6 +24,7 @@ Horns.prototype.render = function () {
 };
 
 Horns.readJson = () => {
+    // $("#photo-template").replaceWith("");
     $.ajax('data/page-1.json', 'json')
         .then(data => {
             data.forEach(item => {
