@@ -4,6 +4,8 @@
 
 let allHorns = [];
 
+let dropdownArray = [];
+
 function Horns(horns){
     this.image_url = horns.image_url;
     this.title = horns.title;
@@ -31,6 +33,7 @@ Horns.readJson = () => {
                 let horns = new Horns(item);
                 horns.render();
             });
+            generateUniqueKeywords();
             populateDropdown();
         })
 };
@@ -38,26 +41,34 @@ Horns.readJson = () => {
 $(() => Horns.readJson());
 
 
-// Below function based on Shopping Cart lab from 201. It populates our dropdown menu
+// Below is our function for generating unique keywords for the menu. Wed's code review was referenced.
+
+function generateUniqueKeywords() {
+    allHorns.forEach(animal => {
+        if(!dropdownArray.includes(animal.keyword)){
+            dropdownArray.push(animal.keyword);
+        }
+    })
+}
+
+// Below is our function for populating our dropdown. Wed's code review was referenced.
 
 function populateDropdown() {
-    var selectElement = document.getElementById('select-keyword');
-    allHorns.forEach((horn, i) => {
-      var opt = document.createElement('option');
-      opt.innerHTML = horn.keyword;
-      selectElement.appendChild(opt);
-      opt.value = (allHorns[i].keyword);
+    const selectEl = $('#select-keyword');
+    dropdownArray.forEach(keyword => {
+        const $optionEl = $(`<option value=${keyword}>${keyword}</option>`)
+        selectEl.append($optionEl);
     })
-  };
+};
   
-// Below is our eventhandler for clicks
+// Below is our eventhandler for changing on selection
 
-  $("#select-keyword").on("click", keywordFilter);
+  $('#select-keyword').on('change', keywordFilter);
 
 // Below is our function for hiding all the objects and showing only selected keyword objects
 
 function keywordFilter() {
-    $("section").hide();
+    $('section').hide();
     let selectedKeyword = $(this).val();
     $(`.${selectedKeyword}`).show();
 };
