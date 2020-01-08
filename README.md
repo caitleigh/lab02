@@ -23,3 +23,14 @@ Start time: 10:05am
 Finish time: 1pm
 
 Actual time needed to complete: 1h 55m
+
+
+Number and name of feature: Feature #3 - Styling
+
+Estimate of time needed to complete: 45m
+
+Start time: 1:10am
+
+Finish time: 1:50pm
+
+Actual time needed to complete: 40m
