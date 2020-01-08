@@ -1,2 +1,14 @@
 # lab02
 This is for 301 Lab 2 - paired programing 
+Matthew Johnson and Cait Rowland 
+
+Step 1: Time estimates 
+Number and name of feature: Feature #1 - Display Images
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 9:30am
+
+Finish time: _____
+
+Actual time needed to complete: _____
