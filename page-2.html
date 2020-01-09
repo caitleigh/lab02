@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/layouts.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<!-- Handlebar Template -->
     <script id="entry-template-2" type="text/x-handlebars-template">
       <div class="box">
         <h2>{{title}}</h2>
@@ -17,18 +18,29 @@
         <p>{{description}}</p>
       </div>
     </script>
+
   </head>
+
   <body>
     <header>
-      <h1>Page 2</h1>
+      <h1>The Gallery of Horns - Page 2</h1>
       <select id = "select-keyword-2">
         <option value="default">Filter by Keyword</option>
       </select>
     </header>
     <main>
+  <!-- This div is for linking pages -->
       <div>
         <a href="index.html">Link to Page 1</a>
       </div>
+      
+      <!-- This div is for sort buttons -->
+      <div>
+        <button type="button" id="sort-name">Sort by Animal Name</button>
+        <button type="button" id="sort-number">Sort by Number of Horns</button>
+      </div>
+
+      <!-- This section is where each animal is rendering -->
       <section id="renderedHorns-2"></section>
     </main>
     <footer>
