@@ -2,6 +2,18 @@ main {
     display: inline-block;
 }
 
+#renderedHorns, #renderedHorns-2{
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    max-width: 960px;
+    overflow: auto;
+    margin: 10px;
+    border: solid blue 1px;
+}
+
 /* section {
     float: left;
     height: 250px;
@@ -10,3 +22,13 @@ main {
     margin: 10px;
     border: solid blue 1px;
 } */
+
+.box {
+    height: auto;
+    width: 280px;
+    overflow: auto;
+    margin: 10px;
+    border: solid red 1px;
+    padding: 5px;
+    
+}

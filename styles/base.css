@@ -3,6 +3,7 @@ body {
     background-color: lightgrey;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    margin: auto;
 }
 
 img {
