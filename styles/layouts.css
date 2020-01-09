@@ -2,11 +2,11 @@ main {
     display: inline-block;
 }
 
-section {
+/* section {
     float: left;
     height: 250px;
     width: 280px;
     overflow: auto;
     margin: 10px;
     border: solid blue 1px;
-}
+} */
