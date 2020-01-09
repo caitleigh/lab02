@@ -40,19 +40,30 @@ Number and name of feature: Lab #2 Feature #1: Pagination
 
 Estimate of time needed to complete: 1h
 
-Start time: 9:15
+Start time: 9:15am
 
-Finish time: 9:25
+Finish time: 9:25am
 
 Actual time needed to complete: 10m
 
 
 Number and name of feature: Lab #2 Feature #2: Templating
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 1h
 
-Start time: 
+Start time: 9:30am
+
+Finish time: 10:30
+
+Actual time needed to complete: 1h
+
+
+Number and name of feature: Lab #2 Feature #3: Styling with Flexbox
+
+Estimate of time needed to complete: 1h
+
+Start time: 10:40am
 
 Finish time: 
 
-Actual time needed to complete: 
+Actual time needed to complete:

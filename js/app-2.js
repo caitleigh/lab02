@@ -15,14 +15,12 @@ function Horns(horns){
     allHorns.push(this);
 }
 
+// Below is our render function using Handlebars
+
 Horns.prototype.render = function () {
-    let $hornsClone = $('#photo-template-2').clone();
-    $('main').append($hornsClone);
-    $hornsClone.find('h2').text(this.title);
-    $hornsClone.find('img').attr('src', this.image_url);
-    $hornsClone.find('p').text(this.description);
-    $hornsClone.attr('class', this.keyword);
-    // $hornsClone.attr('class', this.horns);
+    var source = $('#entry-template-2').html();
+    var template = Handlebars.compile(source);
+    return template(this);
 };
 
 Horns.readJson = () => {
@@ -31,7 +29,8 @@ Horns.readJson = () => {
         .then(data => {
             data.forEach(item => {
                 let horns = new Horns(item);
-                horns.render();
+                let hornsRendered = horns.render();
+                $('#renderedHorns-2').append(hornsRendered);
             });
             generateUniqueKeywords();
             populateDropdown();
@@ -68,7 +67,9 @@ function populateDropdown() {
 // Below is our function for hiding all the objects and showing only selected keyword objects
 
 function keywordFilter() {
-    $('section').hide();
+    $('h2').hide();
+    $('img').hide();
+    $('p').hide();
     let selectedKeyword = $(this).val();
     $(`.${selectedKeyword}`).show();
 };

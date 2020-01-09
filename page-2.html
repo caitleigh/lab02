@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="styles/layouts.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
+    <script id="entry-template-2" type="text/x-handlebars-template">
+      <h2>{{title}}</h2>
+      <img src={{image_url}} alt="{{title}}" class="{{keyword}}">
+      <p>{{description}}</p>
+    </script>
   </head>
   <body>
     <header>
@@ -23,16 +27,15 @@
       <div>
         <a href="index.html">Link to Page 1</a>
       </div>
-      <section id="photo-template-2">
-        <h2></h2>
-        <img src="" alt="">
-        <p></p>
-      </section>
+      <section id="renderedHorns-2"></section>
     </main>
     <footer>
       &copy; 2018 Code Fellows
       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
       <script src="js/app-2.js"></script>
     </footer>
   </body>
 </html>
+
+<!-- The Index page from Lab02 was used as the base for this page -->
