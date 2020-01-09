@@ -23,7 +23,6 @@ Horns.prototype.render = function () {
     return template(this);
 };
 
-
 Horns.readJson = () => {
     // $("#photo-template").replaceWith("");
     $.ajax('data/page-1.json', 'json')
@@ -64,6 +63,38 @@ function populateDropdown() {
 // Below is our eventhandler for changing on selection
 
   $('#select-keyword').on('change', keywordFilter);
+
+// Below is our eventhanler for sorting //
+$('#sort-name').on('click', sortNameAndDisplay);
+$('#sort-number').on('click', sortNumberAndDisplay);
+
+// Below is our sorting functions that will be called on clicking of corresponding buttons //
+
+function sortNameAndDisplay () {
+    $('.box').detach();
+    sortName(allHorns);
+    allHorns.forEach(obj => {
+        $('#renderedHorns').append(obj.render());
+    });
+}
+
+function sortNumberAndDisplay () {
+    $('.box').detach();
+    sortNumber(allHorns);
+    allHorns.forEach(obj => {
+        $('#renderedHorns').append(obj.render());
+    });
+}
+
+
+// functionsfor sorting //
+const sortName = (allHorns) => allHorns.sort((a, b) => {
+    return a.title > b.title ? 1: -1
+});
+
+const sortNumber =(allHorns) => allHorns.sort((a, b) => {
+    return a.horns > b.horns ? 1: -1
+});
 
 // Below is our function for hiding all the objects and showing only selected keyword objects
 
